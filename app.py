@@ -22,22 +22,19 @@ async def on_chat_start():
 
 @cl.on_message
 async def main():
-    result = json.loads(crew.kickoff())
+    result = crew.kickoff()
 
-    print(result)
-    print(result['quiz'])
-
-    questions = result['quiz']['questions']
+    # questions = result['quiz']['questions']
 
     msg = cl.Message(content="")
 
-    for question in questions:
-        msg.stream_token(question)
+    # for question in questions:
+    #     msg.stream_token(question)
 
-    await msg.send()
-    # await cl.Message(
-    #     content=f"The quiz has been created successfully. Here is the quiz:\n\n{result}"
-    # ).send()
+    # await msg.send()
+    await cl.Message(
+        content=f"The quiz has been created successfully. Here is the quiz:\n\n{result}"
+    ).send()
 
 @cl.on_chat_end
 def end():
