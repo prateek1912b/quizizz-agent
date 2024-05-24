@@ -1,18 +1,15 @@
 import chainlit as cl
+import json
+
 from crew import crew
 
 @cl.set_chat_profiles
 async def chat_profile():
     return [
         cl.ChatProfile(
-            name="Quizizz Bot",
+            name="The Creator",
             markdown_description="Create quizizz in seconds with the help of AI!",
-            icon='https://quizizz.com/wf/assets/60aca2b71ab9a5018cecf20b_Quizizz_favicon.png'
-        ),
-        cl.ChatProfile(
-            name="GPT-4",
-            markdown_description="The underlying LLM model is **GPT-4**.",
-            icon="https://picsum.photos/250",
+            icon='https://quizizz.com/wf/assets/60aca2b71ab9a5018cecf20b_Quizizz_favicon.png',
         ),
     ]
 @cl.on_chat_start
@@ -20,16 +17,31 @@ async def on_chat_start():
     chat_profile = cl.user_session.get("chat_profile")
     await cl.Message(
         content=f"Hello, I am {chat_profile}. Type /start to start the quiz creation process.",
+        author=chat_profile,
     ).send()
 
-@cl.on_message("/start")
+@cl.on_message
 async def main():
-    result = crew.kickoff()
+    result = json.loads(crew.kickoff())
 
-    await cl.Message(
-        content=f"The quiz has been created successfully. Here is the quiz:\n\n{result}"
-    ).send()
+    print(result)
+    print(result['quiz'])
 
+    questions = result['quiz']['questions']
+
+    msg = cl.Message(content="")
+
+    for question in questions:
+        msg.stream_token(question)
+
+    await msg.send()
+    # await cl.Message(
+    #     content=f"The quiz has been created successfully. Here is the quiz:\n\n{result}"
+    # ).send()
+
+@cl.on_chat_end
+def end():
+    print("goodbye", cl.user_session.get("id"))
 
 # import chainlit as cl
 

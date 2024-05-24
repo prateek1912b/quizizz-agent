@@ -20,7 +20,7 @@ analyst = Agent(
     allow_delegation = False,
     llm = ChatOpenAI(
         openai_api_key=os.environ.get('OPENAI_API_KEY'), 
-        model=os.environ.get('OPENAI_MODEL_NAME')
+        model=os.environ.get('OPENAI_MODEL_NAME'),
     ),
     tools = [
         get_human_input
@@ -42,7 +42,7 @@ task = Task(
 task2 = Task(
     description = (
         "Based on the quiz created earlier, format the quiz in a JSON format.\n"
-        "The JSON format should have the following structure:\n"
+        "Make the sure the format is JSON parsable and can be used in Python for further processing.\n"
     ),
     expected_output="The final quiz which can be used by the teacher for their students.",
     agent=analyst,
