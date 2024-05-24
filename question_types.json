@@ -1,0 +1,186 @@
+{
+  "MCQ": {
+    "_id": {
+      "$oid": "5e7cd1eda1c8bb001bdc389c"
+    },
+    "type": "MSQ",
+    "time": null,
+    "structure": {
+      "settings": {
+        "hasCorrectAnswer": true,
+        "fibDataType": "string",
+        "canSubmitCustomResponse": false,
+        "doesOptionHaveMultipleTargets": false
+      },
+      "hasMath": false,
+      "query": {
+        "type": null,
+        "hasMath": false,
+        "math": {
+          "latex": [],
+          "template": null
+        },
+        "answerTime": 0,
+        "text": "<p>Which of the following landmarks is in Bangalore?</p>",
+        "media": []
+      },
+      "options": [
+        {
+          "type": "text",
+          "hasMath": false,
+          "math": {
+            "latex": [],
+            "template": null
+          },
+          "answerTime": 0,
+          "id": "5e7cd1eda1c8bb001bdc3890",
+          "text": "<p>Taj Mahal</p>",
+          "media": [],
+          "_id": "5e7cd1eda1c8bb001bdc3890"
+        },
+        {
+          "type": "text",
+          "hasMath": false,
+          "math": {
+            "latex": [],
+            "template": null
+          },
+          "answerTime": 0,
+          "id": "5e7cd1eda1c8bb001bdc3891",
+          "text": "<p>KR Market</p>",
+          "media": [],
+          "_id": "5e7cd1eda1c8bb001bdc3891"
+        },
+        {
+          "type": "text",
+          "hasMath": false,
+          "math": {
+            "latex": [],
+            "template": null
+          },
+          "answerTime": 0,
+          "id": "5e7cd1eda1c8bb001bdc3892",
+          "text": "<p>Marina Beach</p>",
+          "media": [],
+          "_id": "5e7cd1eda1c8bb001bdc3892"
+        }
+      ],
+      "explain": null,
+      "hints": [],
+      "answer": [1],
+      "kind": "MSQ",
+      "marks": {
+        "correct": 1,
+        "incorrect": 0
+      }
+    },
+    "ver": 2
+  },
+
+  "BLANK": {
+    "_id": {
+      "$oid": "5e7cd2b5a1c8bb001bdc38a1"
+    },
+    "type": "BLANK",
+    "time": null,
+    "structure": {
+      "settings": {
+        "hasCorrectAnswer": true,
+        "fibDataType": "string",
+        "canSubmitCustomResponse": false,
+        "doesOptionHaveMultipleTargets": false,
+        "ignoreAccentMarksForEvaluation": false,
+        "enableAccentMarks": false,
+        "questionMetadata": {
+          "specialIndices": []
+        }
+      },
+      "hasMath": false,
+      "query": {
+        "type": null,
+        "hasMath": false,
+        "math": {
+          "latex": [],
+          "template": null
+        },
+        "answerTime": 0,
+        "text": "<p>Bangalore is the capital of which state?</p>",
+        "media": []
+      },
+      "options": [
+        {
+          "type": "text",
+          "hasMath": false,
+          "math": {
+            "latex": [],
+            "template": null
+          },
+          "answerTime": 0,
+          "id": "5e7cd2b5a1c8bb001bdc38a0",
+          "text": "Karnataka",
+          "media": [],
+          "_id": "5e7cd2b5a1c8bb001bdc38a0"
+        },
+        {
+          "type": "text",
+          "hasMath": false,
+          "math": {
+            "latex": [],
+            "template": null
+          },
+          "answerTime": 0,
+          "id": "5e7cd2b5a1c8bb001bdc38a1",
+          "text": "",
+          "media": [],
+          "_id": "5e7cd2b5a1c8bb001bdc38a1"
+        }
+      ],
+      "explain": null,
+      "hints": [],
+      "answer": [],
+      "kind": "BLANK",
+      "marks": {
+        "correct": 1,
+        "incorrect": 0
+      }
+    },
+    "ver": 4
+  },
+
+  "OPEN": {
+    "_id": {
+      "$oid": "5e7cd2d2a1c8bb001bdc38a2"
+    },
+    "type": "OPEN",
+    "time": null,
+    "structure": {
+      "settings": {
+        "hasCorrectAnswer": false,
+        "fibDataType": "string",
+        "doesOptionHaveMultipleTargets": false
+      },
+      "hasMath": false,
+      "query": {
+        "type": null,
+        "hasMath": false,
+        "math": {
+          "latex": [],
+          "template": null
+        },
+        "answerTime": 0,
+        "text": "<p>What is the best thing about Bangalore?</p>",
+        "media": []
+      },
+      "options": [],
+      "explain": null,
+      "hints": [],
+      "answer": [],
+      "kind": "OPEN",
+      "marks": {
+        "correct": 0,
+        "incorrect": 0
+      }
+    },
+    "ver": 4
+  }
+}
